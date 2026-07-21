@@ -1,0 +1,136 @@
+:root {
+--pri : #112D4E;
+--sec :#3F72AF;
+--tri : #DBE2EF;
+--four : #F9F7F7;
+
+
+/* --pri : #FFB8E0;
+--sec :#EC7FA9;
+--tri :#BE5985;
+--four : #FFEDFA; */
+
+/* 
+--pri : #D6336C; 
+--sec: #FF4081;
+--tri: #FFB6C1;
+--four:#FFF5F8; */
+/* 
+ --pri :#222831;
+--sec :#393E46;
+--tri:#DFD0B8;
+--four: #948979; */
+/* 
+--pri :#8db775;
+--sec :#BFD8AF;
+--four :#D4E7C5;
+--tri :#f3faef; */
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+}
+
+body , html{
+    height: 100%;
+    width: 100%;
+    box-sizing:  border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--pri);
+    color: var(--tri);
+    padding:  0rem 0.5rem;
+}
+
+nav{
+    height: 4rem;
+    width: 100%;
+    background-color: var(--four);
+    border-radius: 1rem;
+   border: 0.2rem solid var(--sec);
+}
+
+
+
+@property --rotate{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits:  false;
+}
+
+
+@keyframes heroSectionAnimation {
+from{
+ --rotate :0deg;
+}
+to{
+    --rotate :360deg;
+}
+}
+
+.heroSec{
+    height: 14rem;
+    width: 100%;
+    padding: 0.2rem;
+    border: 0.2rem solid transparent;
+    border-radius: 1rem;
+    background: 
+    linear-gradient(var(--four)) padding-box,
+    conic-gradient( from var(--rotate),var(--sec) , var(--four),  var(--four) , var(--sec) , var(--sec))
+    border-box;
+    margin-top: 1rem;
+    transition: all ease-in 1s;
+ animation:heroSectionAnimation 5s linear infinite;
+ animation-play-state: paused;
+}
+.heroSec:hover{
+    animation-play-state: running;
+    box-shadow:
+        0 0 10px var(--tri),
+        0 0 20px var(--tri),
+        0 0 40px var(--tri);
+}
+
+
+.outerDiv {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:0.5rem;
+    flex-wrap: wrap;
+}
+.allElements{
+ flex-shrink: 0;
+    border: 0.2rem solid var(--sec);
+    border-radius: 0.5rem;
+    background-color: var(--four);
+    height: 45vh;
+    width: 50vh;
+    transition: all ease-in-out 0.5s;
+}
+.allElements img{
+    width: 100%;
+    height: 100%;
+background-position: center;
+background-size: cover;
+}
+
+.allElements:hover{
+    scale: 0.95;
+    box-shadow: 0.5rem 0.5rem 5rem var(--sec);
+}
+
+.ContentBox{
+    height: 100vh;
+    width: 100%;
+ display: none;
+ position: fixed;
+ top:0;
+ left: 0;
+z-index: 1;
+background-color: var(--pri);
+transition: all ease-in-out 0.5s;
+}
