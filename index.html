@@ -1,82 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main>
-        <nav>
-            <select name="Theme" id="Theme">
-                <option value="Midnight_Sand">Midnight Sand</option>
-                <option value="Ocean_Blue">Ocean Blue</option>
-                <option value="Cherry_Blossom">Cherry Blossom</option>
-                <option value="Pink_Passion">Pink Passion</option>
-                <option value="Sage_Green">Sage Green</option>
-            </select>
-                                
-        </nav>
-         <section class="heroSec"></section>
-         <div class="outerDiv">
-             <section class="todo allElements" id="0">
-                 <img src="images/Todo.png" alt="Todo image">
-                </section>
-           <section class="daily_Planner allElements" id="1">
-               <img src="images/Daily_Planner.png" alt="Daily_Planner image">
-           </section>
-           <section class="motivation allElements" id="2">
-            <img src="images/Motivation.png" alt="Motivation image">
+      <nav>
+        <select name="Theme" id="Theme">
+          <option value="Midnight_Sand">Midnight Sand</option>
+          <option value="Ocean_Blue">Ocean Blue</option>
+          <option value="Cherry_Blossom">Cherry Blossom</option>
+          <option value="Pink_Passion">Pink Passion</option>
+          <option value="Sage_Green">Sage Green</option>
+        </select>
+      </nav>
+      <section class="heroSec"></section>
+      <div class="outerDiv">
+        <section class="todo allElements" id="0">
+          <img src="images/Todo.png" alt="Todo image" />
+        </section>
+        <section class="daily_Planner allElements" id="1">
+          <img src="images/Daily_Planner.png" alt="Daily_Planner image" />
+        </section>
+        <section class="motivation allElements" id="2">
+          <img src="images/Motivation.png" alt="Motivation image" />
         </section>
         <section class="time allElements" id="3">
-            <img src="images/Timer.png" alt="Timer image">
+          <img src="images/Timer.png" alt="Timer image" />
         </section>
-    </div>
+      </div>
 
-   <section class="ContentBox" id="todoContentBox"><button class="backButton commonButtonDesign" id="0">Close</button>
+      <section class="ContentBox" id="todoContentBox">
+        <button class="backButton commonButtonDesign" id="0">Close</button>
 
-      <div class="todoOuterDiv">
-       <div class="todoLeftContainer">
-      <form class="todoForm">
-        <label for="todoTask">
-            <input type="text" name="todoTask" class="todoInput" id="todoTask" placeholder="Enter your Task" required>
-        </label>
-        <label for="todoDes">
-            <textarea name="todoDes" id="todoDes" class="todoInput todoTextArea" placeholder="Enter your Message"></textarea>
-        </label>
-        <label for="todoImp">
-            <input type="checkbox"  name="todoImp" id="todoImp" >
-            Mark as Important
-            </label>
-      
-          <button class="todoButton commonButtonDesign">Add Task</button>
-      </form>
-       </div>
+        <div class="todoOuterDiv">
+          <div class="todoLeftContainer">
+            <form class="todoForm">
+              <label for="todoTask">
+                <input
+                  type="text"
+                  name="todoTask"
+                  class="todoInput"
+                  id="todoTask"
+                  placeholder="Enter your Task"
+                  required
+                />
+              </label>
+              <label for="todoDes">
+                <textarea
+                  name="todoDes"
+                  id="todoDes"
+                  class="todoInput todoTextArea"
+                  placeholder="Enter your Message"
+                ></textarea>
+              </label>
+              <label for="todoImp" class="todoImp">
+                <input type="checkbox" name="todoImp" id="todoImp" />
+                Mark as Important
+              </label>
 
+              <button class="todoButton commonButtonDesign">Add Task</button>
+            </form>
+          </div>
 
-     <div class="todoRightContainer">
+          <div class="todoRightContainer"></div>
+        </div>
+      </section>
 
-         
-    </div>
-</div>
+<!-- daily planner box start  -->
 
+      <section class="ContentBox">
+        <button class="backButton commonButtonDesign" id="1">Close</button>
+        <h1 class="commonH1">Plane your Daily Routine</h1>
+        <div class="dailyPlannerOuterDiv">
+        </div>
+      </section>
 
+<!--Motivational box start here  -->
+      <section class="ContentBox" id="MotivationContentBox">
+        <button class="backButton commonButtonDesign" id="2">Close</button>
+      <h1 class="commonH1" id="motivationH1">✨ Stay Focused</h1>
+      <div class="motivationOuterDiv1">
+        <div class="motivationOuterDiv2">
+            <div class="motivationOuterDiv3">
 
-
-
-
-
-
-
-
-</section>
-   <section class="ContentBox"><button class="backButton commonButtonDesign" id="1">Close</button></section>
-   <section class="ContentBox"><button class="backButton commonButtonDesign" id="2">Close</button></section>
-   <section class="ContentBox"><button class="backButton commonButtonDesign" id="3">Close</button></section>
-
+                <div class="motivationInnerDiv">
+                    <p class="motivationPera"></p>
+                    <h4 class="MotivationH4"></h4>
+                </div>
+            </div>
+        </div>
+      </div>  
+    </section>
+      <section class="ContentBox">
+        <button class="backButton commonButtonDesign" id="3">Close</button>
+      </section>
     </main>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
