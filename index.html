@@ -9,7 +9,16 @@
 </head>
 <body>
     <main>
-        <nav></nav>
+        <nav>
+            <select name="Theme" id="Theme">
+                <option value="Midnight_Sand">Midnight Sand</option>
+                <option value="Ocean_Blue">Ocean Blue</option>
+                <option value="Cherry_Blossom">Cherry Blossom</option>
+                <option value="Pink_Passion">Pink Passion</option>
+                <option value="Sage_Green">Sage Green</option>
+            </select>
+                                
+        </nav>
          <section class="heroSec"></section>
          <div class="outerDiv">
              <section class="todo allElements" id="0">
@@ -26,10 +35,46 @@
         </section>
     </div>
 
-   <section class="ContentBox"></section>
-   <section class="ContentBox"></section>
-   <section class="ContentBox"></section>
-   <section class="ContentBox"></section>
+   <section class="ContentBox" id="todoContentBox"><button class="backButton commonButtonDesign" id="0">Close</button>
+
+      <div class="todoOuterDiv">
+       <div class="todoLeftContainer">
+      <form class="todoForm">
+        <label for="todoTask">
+            <input type="text" name="todoTask" class="todoInput" id="todoTask" placeholder="Enter your Task" required>
+        </label>
+        <label for="todoDes">
+            <textarea name="todoDes" id="todoDes" class="todoInput todoTextArea" placeholder="Enter your Message"></textarea>
+        </label>
+        <label for="todoImp">
+            <input type="checkbox"  name="todoImp" id="todoImp" >
+            Mark as Important
+            </label>
+      
+          <button class="todoButton commonButtonDesign">Add Task</button>
+      </form>
+       </div>
+
+
+     <div class="todoRightContainer">
+
+         
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</section>
+   <section class="ContentBox"><button class="backButton commonButtonDesign" id="1">Close</button></section>
+   <section class="ContentBox"><button class="backButton commonButtonDesign" id="2">Close</button></section>
+   <section class="ContentBox"><button class="backButton commonButtonDesign" id="3">Close</button></section>
 
     </main>
     <script src="script.js"></script>

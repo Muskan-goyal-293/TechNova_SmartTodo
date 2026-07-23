@@ -1,136 +1,321 @@
 :root {
---pri : #112D4E;
---sec :#3F72AF;
---tri : #DBE2EF;
---four : #F9F7F7;
-
-
-/* --pri : #FFB8E0;
---sec :#EC7FA9;
---tri :#BE5985;
---four : #FFEDFA; */
-
-/* 
---pri : #D6336C; 
---sec: #FF4081;
---tri: #FFB6C1;
---four:#FFF5F8; */
-/* 
- --pri :#222831;
---sec :#393E46;
---tri:#DFD0B8;
---four: #948979; */
-/* 
+  
 --pri :#8db775;
 --sec :#BFD8AF;
 --four :#D4E7C5;
---tri :#f3faef; */
-
+--tri :#f3faef;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:  border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body , html{
-    height: 100%;
-    width: 100%;
-    box-sizing:  border-box;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--pri);
-    color: var(--tri);
-    padding:  0rem 0.5rem;
+body,
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--pri);
+  padding: 0rem 0.5rem;
+  text-transform: capitalize;
 }
 
-nav{
-    height: 4rem;
-    width: 100%;
-    background-color: var(--four);
-    border-radius: 1rem;
-   border: 0.2rem solid var(--sec);
+nav {
+  height: 4rem;
+  width: 100%;
+  background-color: var(--four);
+  border-radius: 1rem;
+  border: 0.2rem solid var(--sec);
 }
 
-
-
-@property --rotate{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits:  false;
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
-
 
 @keyframes heroSectionAnimation {
-from{
- --rotate :0deg;
-}
-to{
-    --rotate :360deg;
-}
+  from {
+    --rotate: 0deg;
+  }
+  to {
+    --rotate: 360deg;
+  }
 }
 
-.heroSec{
-    height: 14rem;
-    width: 100%;
-    padding: 0.2rem;
-    border: 0.2rem solid transparent;
-    border-radius: 1rem;
-    background: 
+.heroSec {
+  height: 14rem;
+  width: 100%;
+  padding: 0.2rem;
+  border: 0.2rem solid transparent;
+  border-radius: 1rem;
+  background:
     linear-gradient(var(--four)) padding-box,
-    conic-gradient( from var(--rotate),var(--sec) , var(--four),  var(--four) , var(--sec) , var(--sec))
-    border-box;
-    margin-top: 1rem;
-    transition: all ease-in 1s;
- animation:heroSectionAnimation 5s linear infinite;
- animation-play-state: paused;
+    conic-gradient(
+        from var(--rotate),
+        var(--sec),
+        var(--four),
+        var(--four),
+        var(--sec),
+        var(--sec)
+      )
+      border-box;
+  margin-top: 1rem;
+  transition: all ease-in 1s;
+  animation: heroSectionAnimation 5s linear infinite;
+  animation-play-state: paused;
 }
-.heroSec:hover{
-    animation-play-state: running;
-    box-shadow:
-        0 0 10px var(--tri),
-        0 0 20px var(--tri),
-        0 0 40px var(--tri);
+.heroSec:hover {
+  animation-play-state: running;
+  box-shadow:
+    0 0 10px var(--tri),
+    0 0 20px var(--tri),
+    0 0 30px var(--tri);
 }
-
 
 .outerDiv {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap:0.5rem;
-    flex-wrap: wrap;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
-.allElements{
- flex-shrink: 0;
-    border: 0.2rem solid var(--sec);
-    border-radius: 0.5rem;
-    background-color: var(--four);
-    height: 45vh;
-    width: 50vh;
-    transition: all ease-in-out 0.5s;
+.allElements {
+  flex-shrink: 0;
+  border: 0.2rem solid var(--sec);
+  border-radius: 0.5rem;
+  background-color: var(--four);
+  height: 45vh;
+  width: 50vh;
+  transition: all ease-in-out 0.5s;
 }
-.allElements img{
-    width: 100%;
-    height: 100%;
-background-position: center;
-background-size: cover;
-}
-
-.allElements:hover{
-    scale: 0.95;
-    box-shadow: 0.5rem 0.5rem 5rem var(--sec);
+.allElements img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
-.ContentBox{
-    height: 100vh;
-    width: 100%;
- display: none;
- position: fixed;
- top:0;
- left: 0;
-z-index: 1;
+.allElements:hover {
+  scale: 0.95;
+  box-shadow: 0rem 0rem 5rem var(--sec);
+}
+
+.ContentBox {
+  height: 100vh;
+  width: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--pri);
+  transition: all ease-in 0.5s;
+  padding: 1rem;
+}
+
+.commonButtonDesign {
+  color: var(--pri);
+  background-color: var(--four);
+  border: 0.1rem solid var(--tri);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  transition: all ease-in 0.3s;
+  cursor: pointer;
+}
+.commonButtonDesign:hover {
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--four);
+}
+.commonButtonDesign:active {
+  scale: 0.95;
+}
+.backButton{
+  position: absolute;
+  right: 1rem;
+}
+
+
+/* section one Todo Content Box Styling  */
+.todoOuterDiv{
+    background-color: var(--sec);
+    margin-top: 4rem;
+    height:100%;
+   display: flex;
+   gap:1rem ;
+   padding: 1rem;
+   border-radius: 1rem;
+
+}
+
+.todoOuterDiv .todoLeftContainer{
 background-color: var(--pri);
-transition: all ease-in-out 0.5s;
+border-radius: 1rem;
+width: 40%;
+padding: 1rem;
 }
+.todoOuterDiv .todoLeftContainer .todoForm{
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+.todoOuterDiv .todoLeftContainer .todoForm .todoInput{
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color:var(--pri);
+    outline-color: var(--pri);
+    font-weight: 800;
+}
+.todoTextArea{
+    height: 20rem;
+    font-weight: 600;
+    font-size: 1rem;
+    resize: none;
+
+    }
+
+.todoRightContainer{
+    width: 60%; 
+background-color: var(--pri);
+padding: 0.5rem;
+border-radius: 1rem;
+overflow: auto;
+scrollbar-width: none;
+scroll-behavior: smooth;
+}
+.todoRightContainer .todoTaskShowBoxes{
+background-color: var(--sec);
+border-radius: 1rem;
+padding: 0.5rem;
+margin-bottom: 0.5rem;
+
+}
+.todoRightContainer .todoTaskShowBoxes .todoTaskShowImp{
+background-color: var(--pri);
+width: fit-content;
+color: var(--tri);
+font-weight: 900;
+font-size: 0.8rem;
+padding:0.3rem ;
+border-radius: 1rem;
+}
+
+.todoTaskShowPera{
+    font-size: 1.2rem;
+}
+.todoTaskShowImp#true{
+    opacity: 1;
+}
+
+.todoTaskShowImp#false{
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet */
+@media (max-width: 992px) {
+  .todoOuterDiv .todoLeftContainer {
+    width: 40%;
+  }
+
+  .todoRightContainer{
+         width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .todoOuterDiv {
+    flex-direction: column;
+  }
+
+  .todoOuterDiv .todoLeftContainer {
+    width: 100%;
+  }
+
+  .todoTextArea {
+    height: 12rem;
+  }
+
+    .todoRightContainer{
+        width: 100%;
+        min-height: 20rem;
+    }
+
+    .todoRightContainer .todoTaskShowBoxes{
+        padding: 0.75rem;
+    }
+
+
+
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .todoOuterDiv {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .todoOuterDiv .todoLeftContainer {
+    padding: 0.75rem;
+  }
+
+  .todoOuterDiv .todoLeftContainer .todoForm .todoInput {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .todoTextArea {
+    height: 10rem;
+    font-size: 0.9rem;
+  }
+
+  .todoButton {
+    width: 100%;
+  }
+
+
+    .todoRightContainer{
+        padding: 0.75rem;
+    }
+
+    .todoRightContainer .todoTaskShowBoxes{
+        padding: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .todoRightContainer .todoTaskShowBoxes .todoTaskShowImp{
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+} 
